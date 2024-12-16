@@ -59,4 +59,11 @@ routes.get("/approved-feedback",testimonialController.getAllApprovedFeedbackCont
 //add-recipes:admin
 routes.post("/add-recipe",jwtMiddleware,recipeController.addRecipeController)
 
+//edit-recipes:admin
+routes.put("/recipe/:id/edit",jwtMiddleware,recipeController.updateRecipeController)
+
+//delete-recipes:admin
+routes.delete("/recipe/:id/remove",jwtMiddleware,recipeController.removeRecipeController)
+
+
 module.exports = routes
